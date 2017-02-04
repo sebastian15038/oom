@@ -9,35 +9,28 @@ namespace lesson2
 	{
 		private decimal m_price;
 
-		/// <summary>
-		/// Creates a new book object.
-		/// </summary>
-		/// <param name="title">Title must not be empty.</param>
-		/// <param name="isbn">International Standard Book Number.</param>
-		/// <param name="price">Price must not be negative.</param>
 		public Book(string title, string isbn, decimal price, Currency currency)
 		{
-			if (string.IsNullOrWhiteSpace(title)) throw new ArgumentException("Title must not be empty.", nameof(title));
-			if (string.IsNullOrWhiteSpace(isbn)) throw new ArgumentException("ISBN must not be empty.", nameof(isbn));
 
 			Title = title;
 			ISBN = isbn;
-			UpdatePrice(price, currency);
+			//UpdatePrice(price, currency);
 		}
 
-		/// <summary>
-		/// Gets the book title.
-		/// </summary>
-		public string Title { get; }
+        public string Title {
+            get;
+        }
 
-		/// <summary>
-		/// Gets the International Standard Book Number.
-		/// </summary>
-		public string ISBN { get; }
+        public string ISBN { get; }
 
-		/// <summary>
-		/// Gets the currency of this book's price.
-		/// </summary>
+
+
+
+
+
+
+
+
 		public Currency Currency { get; private set;}
 
 		/// <summary>
@@ -71,6 +64,7 @@ namespace lesson2
 		/// </summary>
 		/// <param name="newPrice">Price must not be negative.</param>
 		/// <param name="newCurrency">Currency.</param>
+        /// 
 		public void UpdatePrice(decimal newPrice, Currency currency)
 		{
 			if (newPrice < 0) throw new ArgumentException("Price must not be negative.", nameof(newPrice));
