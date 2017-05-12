@@ -17,7 +17,12 @@ namespace lesson2
 			//UpdatePrice(price, currency);
 		}
 
-        public string Title {
+
+
+
+
+        public string Title
+        {
             get;
         }
 
@@ -27,11 +32,7 @@ namespace lesson2
 
 
 
-
-
-
-
-		public Currency Currency { get; private set;}
+        public Currency Currency { get; private set;}
 
 		/// <summary>
 		/// Gets the book's price in the given currency.
