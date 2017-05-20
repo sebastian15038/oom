@@ -30,9 +30,8 @@ namespace Tests
         [Test]
         public void CannotCreateBookWithEmptyTitle2()
         {
-            Assert.Catch(() =>
-            {
-                var x = new Book("", "978-1568814247", 78.95m, Currency.EUR);
+            Assert.Catch(() =>    {
+ var x = new Book("", "978-1568814247", 78.95m, Currency.EUR);
             });
         }
 
