@@ -11,6 +11,8 @@ namespace lesson4
         /// Creates a new GiftCard.
         /// </summary>
         /// <param name="amount">Amount must be greater than 0.</param>
+        /// 
+
         public GiftCard (decimal amount, Currency currency)
             : this (new Price (amount, currency), Guid.NewGuid().ToString(), false)
         {
@@ -19,6 +21,7 @@ namespace lesson4
         /// <summary>
         /// Creates a new GiftCard.
         /// </summary>
+        /// 
         /// <param name="amount">Amount must be greater than 0.</param>
         [JsonConstructor]
         private GiftCard(Price amount, string code, bool isRedeemed)

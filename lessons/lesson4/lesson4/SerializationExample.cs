@@ -19,6 +19,7 @@ namespace lesson4
 
             // 3. serialize all items
             // ... include type, so we can deserialize sub-classes to interface type
+
             var settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, TypeNameHandling = TypeNameHandling.Auto };
             Console.WriteLine(JsonConvert.SerializeObject(items, settings));
 
